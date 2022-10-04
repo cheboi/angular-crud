@@ -1,1 +1,22 @@
-<p>create works!</p>
+<div style="width: 500px; margin: auto;">
+  <div class="submit-form">
+    <div *ngIf="!isBookAdded">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" required [(ngModel)]="book.title" name="name" />
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input class="form-control" id="description" required [(ngModel)]="book.description" name="description" />
+      </div>
+
+      <button (click)="addBook()" class="btn btn-success">Create</button>
+    </div>
+
+    <div *ngIf="isBookAdded">
+      <h3>New book added!</h3>
+      <button class="btn btn-success" (click)="newBook()"> + Add More</button>
+    </div>
+  </div>
+</div>
