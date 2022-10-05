@@ -12,9 +12,7 @@ const routes: Routes = [
   { path: 'add', component: CreateComponent }
 ]
 @NgModule({
-  declarations: [],
-  imports: [
-    RouterModule
-  ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [ RouterModule]
 })
 export class AppRoutingModule { }
